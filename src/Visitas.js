@@ -5,9 +5,9 @@ const Visitas = ({ navigation }) => (
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     <Text>Visitas Fiscal Native ;D</Text>
     <Button 
-      title="Abrir Empresa"
+      title="ADCIONAR"
       onPress={() => navigation.navigate('Estabelecimento') }
-    />
+    /> 
   </View>
 );
 
