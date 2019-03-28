@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
+import api from '../services/api';
 import { Button, SectionList, StyleSheet, Text, View } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
@@ -52,36 +52,16 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     paddingTop: 2,
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 2,
+    paddingRight: 2,
     paddingBottom: 2,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "bold",
     backgroundColor: "rgba(247,247,247,1.0)"
   },
   item: {
-    padding: 10,
-    fontSize: 18,
+    padding: 2,
+    fontSize: 12,
     height: 44
   }
 });
-=======
-import React from 'react';
-import { View, Button, Text } from 'react-native';
-
-const Visitas = ({ navigation }) => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Visitas Fiscal Native ;D</Text>
-    <Button 
-      title="ADCIONAR"
-      onPress={() => navigation.navigate('Estabelecimento') }
-    /> 
-  </View>
-);
-
-Visitas.navigationOptions = {
-  title: 'Visitas',
-}
-
-export default Visitas;
->>>>>>> ea25f4ec9e11e44d7ec9fb98ebb72aa9d8602810
