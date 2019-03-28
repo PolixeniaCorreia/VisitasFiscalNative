@@ -3,10 +3,15 @@ import Estabelecimento from "./Estabelecimento";
 
 import { createStackNavigator } from "react-navigation"; // , createBottomTabNavigator, createDrawerNavigator
 
-const StackNavigator = createStackNavigator({
-  Visitas: Visitas,
-  Estabelecimento: Estabelecimento
-});
+const StackNavigator = createStackNavigator(
+  {
+    Visitas: Visitas,
+    Estabelecimento: Estabelecimento
+  },
+  {
+    initialRouteName: "Visitas"
+  }
+);
 
 // const TabNavigator = createBottomTabNavigator({
 //   Home: Visitas,
