@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import { Button, SectionList, StyleSheet, Text, View } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
@@ -64,3 +65,23 @@ const styles = StyleSheet.create({
     height: 44
   }
 });
+=======
+import React from 'react';
+import { View, Button, Text } from 'react-native';
+
+const Visitas = ({ navigation }) => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Visitas Fiscal Native ;D</Text>
+    <Button 
+      title="ADCIONAR"
+      onPress={() => navigation.navigate('Estabelecimento') }
+    /> 
+  </View>
+);
+
+Visitas.navigationOptions = {
+  title: 'Visitas',
+}
+
+export default Visitas;
+>>>>>>> ea25f4ec9e11e44d7ec9fb98ebb72aa9d8602810
