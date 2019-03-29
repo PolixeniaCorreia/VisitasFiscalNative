@@ -2,7 +2,7 @@ import React from "react";
 import { View, SectionList, Button, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 import styles from './style';
-import api from '../services/api';
+
 
 // Import Icon from 'react-native-vector-icons/MaterialIcons';
 

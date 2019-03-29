@@ -1,13 +1,27 @@
 import React, { Component } from "react";
-import api from '../services/api';
-import { Button, SectionList, StyleSheet, Text, View } from "react-native";
+import api from './services/api';
+import { Button, SectionList, StyleSheet, FlatList, Text, View } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import Estabelecimento from "./Estabelecimento";
 
 export default class Visitas extends Component {
   static navigationOptions = {
     title: 'Visitas',
     tabBarLabel: 'Visitas',
   };
+
+  // STATES PARA ARMAZENAR A LISTA QUE IRÁ COMEÇAR VAZIO
+  states = {
+    Estabelecimentos: [],
+  };
+
+  async componentDidMount(){
+    const response = await api.get('/estabelecimentoDAO.php');
+    
+    this.setStates({Estabelecimentos: response.data });
+  
+  }
+
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -40,6 +54,12 @@ export default class Visitas extends Component {
             keyExtractor={(item, index) => index}
           />
         </View>
+      
+
+
+
+
+
       </View>
     );
   }
