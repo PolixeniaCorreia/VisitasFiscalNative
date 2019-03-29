@@ -24,7 +24,12 @@ const Visitas = ({ navigation }) => (
       onPress={() => navigation.navigate("Estabelecimento")}
     />
   </View>
+
+  
 );
+
+
+
 
 Visitas.navigationOptions = {
   title: "Visitas",

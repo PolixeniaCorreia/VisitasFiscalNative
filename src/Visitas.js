@@ -1,25 +1,30 @@
 import React, { Component } from "react";
-import api from './services/api';
-import { Button, SectionList, StyleSheet, FlatList, Text, View } from "react-native";
+import api from "./services/api";
+import {
+  Button,
+  SectionList,
+  StyleSheet,
+  FlatList,
+  Text,
+  View
+} from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import Estabelecimento from "./Estabelecimento";
 
 export default class Visitas extends Component {
   static navigationOptions = {
-    title: 'Visitas',
-    tabBarLabel: 'Visitas',
+    title: "Visitas",
+    tabBarLabel: "Visitas"
   };
 
-  // STATES PARA ARMAZENAR A LISTA QUE IRÁ COMEÇAR VAZIO
-  states = {
-    Estabelecimentos: [],
+  state = {
+    Estabelecimentos: []
   };
 
-  async componentDidMount(){
-    const response = await api.get('/estabelecimentoDAO.php');
-    
-    this.setStates({Estabelecimentos: response.data });
-  
+  async componentDidMount() {
+    const response = await api.get("/estabelecimentoDAO.php");
+
+    this.setState({ Estabelecimentos: response.data });
   }
 
   render() {
@@ -31,35 +36,14 @@ export default class Visitas extends Component {
           onPress={() => this.props.navigation.navigate("Estabelecimento")}
         />
         <View style={styles.container}>
-          <SectionList
-            sections={[
-              { title: "D", data: ["Devin", "Mailson", "Joana"] },
-              {
-                title: "J",
-                data: [
-                  "Jackson",
-                  "James",
-                  "Jillian",
-                  "Jimmy",
-                  "Joel",
-                  "John",
-                  "Julie"
-                ]
-              }
-            ]}
-            renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
-            renderSectionHeader={({ section }) => (
-              <Text style={styles.sectionHeader}>{section.title}</Text>
-            )}
-            keyExtractor={(item, index) => index}
-          />
+        <FlatList 
+        data={this.state.Estabelecimentos}
+        keyExtractor={estab => estab.id}
+        />
+          {this.state.Estabelecimentos.map(estab => (
+            <Text>{estab.cnpj}</Text>
+          ))}
         </View>
-      
-
-
-
-
-
       </View>
     );
   }
