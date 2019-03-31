@@ -2,6 +2,8 @@ import React from "react";
 import { View, SectionList, Button, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 import styles from './style';
+
+
 // Import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Visitas = ({ navigation }) => (
@@ -22,7 +24,12 @@ const Visitas = ({ navigation }) => (
       onPress={() => navigation.navigate("Estabelecimento")}
     />
   </View>
+
+  
 );
+
+
+
 
 Visitas.navigationOptions = {
   title: "Visitas",

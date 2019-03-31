@@ -1,0 +1,88 @@
+[
+  {
+    "gender": "female",
+    "data": [
+      {
+        "gender": "female",
+        "name": {},
+        "location": {},
+        "email": "karla.ferreira@example.com",
+    
+      },
+      {
+        "gender": "female",
+        "name": {
+          "title": "ms",
+          "first": "isabel",
+          "last": "caballero"
+        },
+        "location": {
+          "street": "7168 calle de bravo murillo",
+          "city": "valladolid",
+          "state": "canarias",
+          "postcode": 79290,
+          "coordinates": {
+            "latitude": "-69.7045",
+            "longitude": "4.0689"
+          },
+          "timezone": {
+            "offset": "-9:00",
+            "description": "Alaska"
+          }
+        },
+        "email": "isabel.caballero@example.com"
+      },
+      {
+        "gender": "female",
+        "name": {
+          "title": "mrs",
+          "first": "lily",
+          "last": "campbell"
+        },
+        "location": {
+          "street": "6239 dalhousie ave",
+          "city": "brockton",
+          "state": "northwest territories",
+          "postcode": "X6R 5W4",
+          "coordinates": {
+            "latitude": "44.3179",
+            "longitude": "77.2683"
+          },
+          "timezone": {
+            "offset": "+3:30",
+            "description": "Tehran"
+          }
+        },
+        "email": "lily.campbell@example.com"
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "data": [
+      {
+        "gender": "male",
+        "name": {
+          "title": "mr",
+          "first": "owen",
+          "last": "ouellet"
+        },
+        "location": {
+          "street": "8868 frederick ave",
+          "city": "waterloo",
+          "state": "newfoundland and labrador",
+          "postcode": "J9T 1I9",
+          "coordinates": {
+            "latitude": "-74.7042",
+            "longitude": "-147.1181"
+          },
+          "timezone": {
+            "offset": "-3:30",
+            "description": "Newfoundland"
+          }
+        },
+        "email": "owen.ouellet@example.com"      
+      }
+    ]
+  }
+]
