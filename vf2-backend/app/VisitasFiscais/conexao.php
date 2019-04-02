@@ -1,7 +1,7 @@
 <?php
     $dsn = "mysql:host=localhost;dbname=dbvisitas;charset=utf8";
     $usuario ="root";
-    $senha ="poli20";
+    $senha ="D3vpr0c0n@";
 
     try{
 
