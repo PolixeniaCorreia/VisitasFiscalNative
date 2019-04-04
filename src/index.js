@@ -9,7 +9,7 @@ const StackNavigator = createStackNavigator(
     Estabelecimento: Estabelecimento
   },
   {
-    initialRouteName: "Visitas",
+    initialRouteName: "Visitas"
   }
 );
 
