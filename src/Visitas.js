@@ -20,7 +20,7 @@ export default class Visitas extends Component {
   state = {
     Estabelecimentos: []
   };
-
+  conteúdo
   async componentDidMount() {
     const response = await api.get("/estabelecimentoDAO.php");
 
